@@ -61,6 +61,35 @@ protected void onCreate(Bundle savedInstanceState) {
 - GraphView.T_DONUT : Display as Donut Chart
 - GraphView.T_GAUGE : Display as Gauge Chart
 
+```java
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
+
+    GraphView graphView = (GraphView) findViewById(R.id.graph);
+    // Set Chart Type Pie
+    graphView.setType(GraphView.T_BAR);
+    // Data 1
+    GraphData data1 = new GraphData("How I met your mother");
+    data1.setDate(10);
+    data1.setColor("red")
+    // Data 2
+    GraphData data2 = new GraphData("Friends");
+    data2.setColor("#e8eefa");
+    data2.setDate(30);
+
+    // Set N data Chart
+    graphView.addData(data1);
+    graphView.addData(data2);
+
+    // Generate Chart
+    graphView.make();
+}
+```
+
+
+
 ## Set color data
 ```java
 @Override
