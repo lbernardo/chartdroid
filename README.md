@@ -1,7 +1,7 @@
-#Chartdroid
+# Chartdroid
 Use graphics in your Android apps. ChartDroid uses C3.js to generate elegant graphics
 
-##Create Chart
+## Create Chart
 Use the code below to create charts
 
 **res/layout/activity_main.xml**
